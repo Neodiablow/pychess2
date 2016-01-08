@@ -47,20 +47,3 @@ class King:
             return ["B",8]
         else :
             return []
-        
-
-
-a=King(True,"Classic")
-print(a.moves("B",4))
-print(a.moves("A",4))
-print(a.moves("A",1))
-print(a.moves("C",1))
-print(a.moves("A",8))
-print(a.moves("C",8))
-print(a.moves("H",4))
-print(a.moves("H",1))
-print(a.moves("H",8))
-print(a.smallCastle(True,"Classic"))
-print(a.smallCastle(False,"Classic"))
-print(a.bigCastle(True,"Classic"))
-print(a.bigCastle(False,"Classic"))
