@@ -33,17 +33,17 @@ class King:
             
         return listK
     
-    def smallCastle(self,c,a):
-        if c and a == "Classic":
+    def smallCastle(self):
+        if self.color and self.army == "Classic":
             return ["G",1]
-        elif a == "Classic":
+        elif self.army == "Classic":
             return ["G",8]
         else :
             return []
-    def bigCastle(self,c,a):
-        if c and a == "Classic":
+    def bigCastle(self):
+        if self.color and self.army == "Classic":
             return ["B",1]
-        elif a == "Classic":
+        elif self.army == "Classic":
             return ["B",8]
         else :
             return []
