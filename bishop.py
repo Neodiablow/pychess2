@@ -21,13 +21,13 @@ class Bishop:
         one to find "decreasing coordinates" """
         xValue=alphabet.index(x)
         yValue=y
-        while xValue <= alphabet.index("H") and yValue < 8:
+        while xValue < alphabet.index("H") and yValue < 8:
             xValue+=1
             yValue+=1
             listD+=[(alphabet[xValue],yValue)]
         xValue=alphabet.index(x)
         yValue=y
-        while xValue >= alphabet.index("A") and yValue > 1:
+        while xValue > alphabet.index("A") and yValue > 1:
             xValue-=1
             yValue-=1
             listD+=[(alphabet[xValue],yValue)]
