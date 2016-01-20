@@ -1,3 +1,5 @@
+#! /usr/bin/env python3
+
 from IHM.mainIHM import MainIHMBoard,moveIHM,setInfosPiecesIHM
 
 
