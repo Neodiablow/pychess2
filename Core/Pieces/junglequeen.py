@@ -1,13 +1,13 @@
 #! /usr/bin/env python3
 import string
 from abs_rook import AbsRook
-from abs_bishop import AbsBishop
+from abs_knight import AbsKnight
 
 alphabet=string.ascii_uppercase[0:8] #string used for chess board
 lb = alphabet.index("B")
 ub = alphabet.index("G")
 
-class Queen(AbsRook,AbsBishop):
+class JungleQueen(AbsRook,AbsKnight):
     """A piece of chess"""
     def __init__(self,c,a):
         self.piece="Queen"
@@ -51,6 +51,6 @@ class Queen(AbsRook,AbsBishop):
 #        return listH+listV+listD
         return self.rookMoves(x,y) + self.knightMoves(x,y)
 
-queen=Queen(True,"Classical");
+queen=JungleQueen(True,"Classical");
 print(queen.moves("C",4))
 
