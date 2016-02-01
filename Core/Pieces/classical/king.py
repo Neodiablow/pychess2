@@ -14,26 +14,6 @@ class King(AbsKing):
     
     def moves(self,x,y):
         return self.kingMoves(x,y)
-#        """Returns Valid moves to the model"""
-#        listK=[]
-#        if y<8:                                             #if y<8
-#            listK+=[(x,y+1)]                                #can move upword
-#        if alphabet.index("H")>alphabet.index(x):           #if x<H
-#            listK+=[(alphabet[alphabet.index(x)+1],y)]      #can move on the right
-#        if y>1:                                             #if y>1
-#            listK+=[(x,y-1)]                                #can move downward
-#        if alphabet.index("A")<alphabet.index(x):           #if x> A
-#            listK+=[(alphabet[alphabet.index(x)-1],y)]      #can move on the left
-#        if y<8 and alphabet.index("H")>alphabet.index(x):   #if y<8 && x<y 
-#            listK+=[(alphabet[alphabet.index(x)+1],y+1)]    #can move up right
-#        if y<8 and alphabet.index("A")<alphabet.index(x):   #etc
-#            listK+=[(alphabet[alphabet.index(x)-1],y+1)]    #up left
-#        if y>1 and alphabet.index("H")>alphabet.index(x):   #etc
-#            listK+=[(alphabet[alphabet.index(x)+1],y-1)]    #down right
-#        if y>1 and alphabet.index("A")<alphabet.index(x):   #etc
-#            listK+=[(alphabet[alphabet.index(x)-1],y-1)]    #down left
-#            
-#        return listK
     
     def smallCastle(self):
         if self.color and self.army == "Classic":
@@ -49,7 +29,4 @@ class King(AbsKing):
             return ["B",8]
         else :
             return []
-
-king=King(True,"Classical");
-print(king.moves("C",4))
 
