@@ -1,13 +1,13 @@
 from threading import *
-from Core.Pieces.rook import Rook
-from Core.Pieces.knight import Knight
-from Core.Pieces.bishop import Bishop
-from Core.Pieces.king import King
-from Core.Pieces.queen import Queen
-from Core.Pieces.junglequeen import JungleQueen
-from Core.Pieces.tiger import Tiger
-from Core.Pieces.elephant import Elephant
-from Core.Pieces.pawn import Pawn
+from Core.Pieces.classical.king import King
+from Core.Pieces.classical.queen import Queen
+from Core.Pieces.classical.rook import Rook
+from Core.Pieces.classical.knight import Knight
+from Core.Pieces.classical.bishop import Bishop
+from Core.Pieces.animals.junglequeen import JungleQueen
+from Core.Pieces.animals.tiger import Tiger
+from Core.Pieces.animals.elephant import Elephant
+from Core.Pieces.classical.pawn import Pawn
 import string
 
 plateau = 0

@@ -1,5 +1,4 @@
 #! /usr/bin/env python3
-
 from IHM.mainIHM import MainIHMBoard
 from Core.core import Core
 import time
