@@ -1,32 +1,34 @@
 #! /usr/bin/env python3
 import string
-from Core.Pieces.abs_rook import AbsRook
 
 alphabet=string.ascii_uppercase[0:8] #string used for chess board
 lb = alphabet.index("B")
 ub = alphabet.index("G")
 
-class Elephant(AbsRook):
+class Elephant():
     """A piece of chess"""
-#    def __init__(self,c,a):
-#        self.piece="Rook"
-#        self.color=bool(c)
-#        self.army=str(a)
+    def __init__(self,c,a):
+        self.piece="Elephant"
+        self.color=bool(c)
+        self.army=str(a)
     
     def moves(self,x,y):
-    #Returns Valid moves to the model
-        return self.rookMoves(x,y)
-#        listV=[]
-#        listH=[]
-#        """Rook moves, vertical line, + horizontal line
-#        add the tuple to lists(H&V) declared above"""
-#        for yValue in range(1,9):
-#           listV+=[(x,yValue)] 
-#        for xValue in range(alphabet.index('A'),alphabet.index('H')+1):
-#           listH+=[(alphabet[xValue],y)]
-#
-#        """Remove moves which are not moves"""
-#        listH.remove((x,y))
-#        listV.remove((x,y))
-#
-#        return listH+listV
+        listV=[]
+        listH=[]
+        """Rook moves, vertical line, + horizontal line
+        add the tuple to lists(H&V) declared above"""
+        for yValue in range(y-3,y+4): 
+            if yValue >= 1 and yValue <= 9:
+                listV+=[(x,yValue)] 
+
+        xValue=alphabet.index(x)
+        while xValue > alphabet.index("A") and xValue > alphabet.index(x)-3: 
+            xValue-=1
+            listH+=[(alphabet[xValue],y)]
+        xValue=alphabet.index(x)
+        while xValue < alphabet.index("H") and xValue < alphabet.index(x)+3:  
+            xValue+=1
+            listH+=[(alphabet[xValue],y)]
+
+        return listH+listV
+
